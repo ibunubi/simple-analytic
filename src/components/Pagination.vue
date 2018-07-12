@@ -8,7 +8,7 @@
       <button class="btn btn-sm btn-outline-info" @click="goToPage(totalPage)"><span class="fa fa-fast-forward"></span></button>
     </div>
     <div class="col-sm-4 text-right">
-      {{ `${currentPage.start} - ${currentPage.end} of ${totalPage}` }} 
+      {{ `${currentPage.start} - ${currentPage.end} of ${totalData}` }} 
     </div>
   </div>
 </template>
@@ -20,7 +20,8 @@ import * as mutationTypes from '../store/mutation-types';
 export default {
   computed: mapGetters({
     currentPage: 'getCurrentPage',
-    totalPage: 'getTotalPage'
+    totalPage: 'getTotalPage',
+    totalData: 'getTotalData'
   }),
   methods: mapActions(['changePage', 'goToPage'])
 };

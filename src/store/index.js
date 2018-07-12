@@ -37,6 +37,7 @@ const getters = {
     };
   },
   getTotalPage: state => Math.ceil(state.base.length / state.perPage),
+  getTotalData: state => state.base.length,
   getTopTld: state => {
     let groupBy = _.groupBy(state.base, 'TLD');
 
